@@ -5,6 +5,7 @@ export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
+  // eslint-disable-next-line react/require-default-props
   primary?: boolean;
   /**
    * What background color to use
@@ -27,13 +28,13 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-const Button = ({
+function Button({
   primary = true,
   backgroundColor,
   size = 'medium',
   onClick,
   label,
-}: ButtonProps) => {
+}: ButtonProps) {
   const mode = primary
     ? 'storybook-button--primary'
     : 'storybook-button--secondary';
@@ -49,6 +50,6 @@ const Button = ({
       {label}
     </button>
   );
-};
+}
 
 export default Button;

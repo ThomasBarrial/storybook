@@ -1,7 +1,6 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
-import { Story } from '@storybook/react';
-import { SampleBox, SampleBoxProps } from './SampleBox';
+import { Meta, Story } from '@storybook/react';
+import SampleBox, { SampleBoxProps } from './SampleBox';
 
 export default {
   title: 'Example/SampleBox',
@@ -9,6 +8,7 @@ export default {
   argTypes: {},
 } as Meta;
 
+// eslint-disable-next-line react/function-component-definition
 const Template: Story<SampleBoxProps> = (args) => <SampleBox {...args} />;
 
 export const Primary = Template.bind({});
