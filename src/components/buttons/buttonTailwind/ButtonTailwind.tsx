@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from '../../utils/tailwind';
+import classNames from '../../../utils/tailwind';
 
 export interface ButtonTailwindProps {
   label: string;

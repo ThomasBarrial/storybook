@@ -1,5 +1,4 @@
-import Button from './components/button/Button';
-import SampleBox from './components/sampleBox/SampleBox';
-import ButtonTailwind from './components/buttonTailwind/ButtonTailwind';
+import Button from './components/buttons/button/Button';
+import ButtonTailwind from './components/buttons/buttonTailwind/ButtonTailwind';
 
-export { Button, SampleBox, ButtonTailwind };
+export { Button, ButtonTailwind };
