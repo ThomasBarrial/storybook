@@ -1,34 +1,35 @@
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
+import classNames from '../../../utils/tailwind';
 
 export interface SlideUpProps {
   text: string;
+  inView: boolean | false;
   className: string;
-  duration:
-    | '0'
-    | '75'
-    | '100'
-    | '150'
-    | '200'
-    | '300'
-    | '500'
-    | '700'
-    | '1000'
-    | '1200'
-    | '1500'
-    | '1800'
-    | '2000';
+  // duration:
+  //   | '0'
+  //   | '75'
+  //   | '100'
+  //   | '150'
+  //   | '200'
+  //   | '300'
+  //   | '500'
+  //   | '700'
+  //   | '1000'
+  //   | '1200'
+  //   | '1500'
+  //   | '1800'
+  //   | '2000';
 }
 
-function SlideUp({ text, className, duration }: SlideUpProps): JSX.Element {
-  const { ref, inView } = useInView();
-
+function SlideUp({ text, className, inView }: SlideUpProps): JSX.Element {
   return (
-    <div ref={ref} className={`overflow-hidden ${className}`}>
+    <div className={`overflow-hidden ${className}`}>
       <p
-        className={`${
-          inView ? 'translate-y-0 translate-x-0' : 'translate-y-20 scale-105'
-        } transform  duration-${duration}`}
+        className={classNames(
+          `transform  duration-1000 ${
+            inView ? 'translate-y-0' : 'translate-y-20'
+          } `
+        )}
       >
         {text}
       </p>

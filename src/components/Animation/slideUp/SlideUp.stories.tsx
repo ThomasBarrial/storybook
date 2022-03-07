@@ -15,7 +15,7 @@ const Template: Story<SlideUpProps> = (args) => <SlideUp {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   text: 'Animated Text',
-  duration: '1000',
+  inView: true,
   className: 'font-bold text-5xl',
 };
 
