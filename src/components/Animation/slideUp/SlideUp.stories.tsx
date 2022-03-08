@@ -14,8 +14,12 @@ const Template: Story<SlideUpProps> = (args) => <SlideUp {...args} />;
 // Reuse that template for creating different stories
 export const Primary = Template.bind({});
 Primary.args = {
-  text: 'Animated Text',
-  inView: true,
+  children: (
+    <div>
+      <p>Hello</p>
+    </div>
+  ),
+  duration: 2,
   className: 'font-bold text-5xl',
 };
 

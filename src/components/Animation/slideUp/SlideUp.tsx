@@ -1,38 +1,36 @@
-import React from 'react';
-import classNames from '../../../utils/tailwind';
+import React, { ReactChild } from 'react';
+import { motion } from 'framer-motion';
 
 export interface SlideUpProps {
-  text: string;
-  inView: boolean | false;
-  className: string;
-  // duration:
-  //   | '0'
-  //   | '75'
-  //   | '100'
-  //   | '150'
-  //   | '200'
-  //   | '300'
-  //   | '500'
-  //   | '700'
-  //   | '1000'
-  //   | '1200'
-  //   | '1500'
-  //   | '1800'
-  //   | '2000';
+  children: ReactChild;
+  className?: string;
+  duration: number;
 }
 
-function SlideUp({ text, className, inView }: SlideUpProps): JSX.Element {
+function SlideUp({ children, className, duration }: SlideUpProps): JSX.Element {
+  const variants = {
+    open: {
+      y: 0,
+      scale: 1,
+      transition: { type: 'spring', duration, bounce: 0.1 },
+    },
+    closed: {
+      y: '300px',
+      scale: 0.8,
+      transition: { type: 'spring', duration, bounce: 0.1 },
+    },
+  };
+
   return (
-    <div className={`overflow-hidden ${className}`}>
-      <p
-        className={classNames(
-          `transform  duration-1000 ${
-            inView ? 'translate-y-0' : 'translate-y-20'
-          } `
-        )}
+    <div className="overflow-hidden">
+      <motion.div
+        className={className}
+        variants={variants}
+        initial="closed"
+        animate="open"
       >
-        {text}
-      </p>
+        {children}
+      </motion.div>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import classNames from '../../../utils/tailwind';
 
 export interface ButtonTailwindProps {
@@ -17,7 +18,9 @@ function ButtonTailwind({
   backgroundColor,
 }: ButtonTailwindProps) {
   return (
-    <button
+    <motion.button
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       type="button"
       className={classNames(
         `px-5 py-1 ${className} ${size === 'small' && `text-sm`} ${
@@ -28,7 +31,7 @@ function ButtonTailwind({
       onClick={onClick}
     >
       {label}
-    </button>
+    </motion.button>
   );
 }
 
