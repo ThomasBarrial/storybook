@@ -28,7 +28,7 @@ export const Large = Template.bind({});
 Large.args = {
   ...Medium.args,
   label: 'large Tailwind button 😁',
-  className: 'w-96 text-white rounded-md',
+  className: 'w-96 text-white rounded-md ',
   size: 'large',
 };
 

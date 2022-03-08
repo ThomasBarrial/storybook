@@ -1,5 +1,6 @@
-import Button from './components/button/Button';
-import SampleBox from './components/sampleBox/SampleBox';
-import ButtonTailwind from './components/buttonTailwind/ButtonTailwind';
+import Button from './components/buttons/button/Button';
+import ButtonTailwind from './components/buttons/buttonTailwind/ButtonTailwind';
+import SlideUp from './components/Animation/slideUp';
+import FadeInButton from './components/Animation/buttons/fadeInButton/FadeInButton';
 
-export { Button, SampleBox, ButtonTailwind };
+export { Button, ButtonTailwind, SlideUp, FadeInButton };
