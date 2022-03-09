@@ -1,21 +1,20 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import ButtonTailwind, { ButtonTailwindProps } from './ButtonTailwind';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import * as React from 'react';
+
+import ButtonTailwind from './ButtonTailwind';
 
 export default {
-  title: 'Components/ButtonTailwind',
+  title: 'components/buttons/buttontailwind',
   component: ButtonTailwind,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as Meta;
+} as ComponentMeta<typeof ButtonTailwind>;
 
-// Create a master template for mapping args to render the Button component
-const Template: Story<ButtonTailwindProps> = (args) => (
+const Template: ComponentStory<typeof ButtonTailwind> = (args) => (
   <ButtonTailwind {...args} />
 );
 
-// Reuse that template for creating different stories
 export const Medium = Template.bind({});
 Medium.args = {
   label: 'Tailwind button 😁',

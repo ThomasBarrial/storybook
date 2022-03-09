@@ -1,6 +1,6 @@
 {
   "name": "@digitalcopilote/storybook",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
@@ -64,6 +64,8 @@
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
     "framer-motion": "^6.2.8",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "plop": "^3.0.5",
     "webpack": "^5.70.0"
   }
 }
