@@ -1,19 +1,22 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import SlideUp, { SlideUpProps } from './SlideUp';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import * as React from 'react';
+
+import SlideUp from './SlideUp';
 
 export default {
-  title: 'Components/Animated/SlideUp',
+  title: 'Components/Animation/SlideUp',
   component: SlideUp,
-  argTypes: {},
-} as Meta;
+  argTypes: {
+    duration: { control: 'number' },
+  },
+} as ComponentMeta<typeof SlideUp>;
 
-// Create a master template for mapping args to render the SlideUp component
-const Template: Story<SlideUpProps> = (args) => <SlideUp {...args} />;
+const Template: ComponentStory<typeof SlideUp> = (args) => (
+  <SlideUp {...args} />
+);
 
-// Reuse that template for creating different stories
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   children: (
     <div>
       <p>Hello</p>
@@ -22,6 +25,3 @@ Primary.args = {
   duration: 2,
   className: 'font-bold text-5xl',
 };
-
-// export const Secondary = Template.bind({});
-// Secondary.args = {  };

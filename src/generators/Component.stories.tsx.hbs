@@ -1,0 +1,17 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import * as React from 'react';
+
+import {{ properCase ( getName path ) }} from './{{ properCase ( getName path ) }}';
+
+export default {
+  title: '{{ lowerCase ( getFolder path ) }}',
+  component: {{ properCase ( getName path ) }},
+  argTypes: {},
+} as ComponentMeta<typeof {{ properCase ( getName path ) }}>;
+
+const Template: ComponentStory<typeof {{ properCase ( getName path ) }}> = (args) => (
+  <{{ properCase ( getName path ) }} {...args} />
+);
+
+export const Default = Template.bind({});
+Default.args = {};

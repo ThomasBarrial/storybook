@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import FadeInButton, { FadeInButtonProps } from './FadeInButton';
 
 export default {
-  title: 'Components/Animated/FadeInButton',
+  title: 'components/buttons/FadeInButton',
   component: FadeInButton,
   argTypes: {
     backgroundColor: { control: 'color' },
