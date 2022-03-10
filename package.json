@@ -1,6 +1,6 @@
 {
   "name": "@digitalcopilote/storybook",
-  "version": "0.0.19",
+  "version": "0.0.31",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
@@ -61,6 +61,7 @@
     "/lib"
   ],
   "dependencies": {
+    "@digitalcopilote/storybook": "https://gitlab.com/d2935/storybook.git",
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
     "framer-motion": "^6.2.8",
