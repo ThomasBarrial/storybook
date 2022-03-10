@@ -61,7 +61,6 @@
     "/lib"
   ],
   "dependencies": {
-    "@digitalcopilote/storybook": "https://gitlab.com/d2935/storybook.git",
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
     "framer-motion": "^6.2.8",
